@@ -1,0 +1,61 @@
+{
+  "name": "@psmmcp/core",
+  "version": "0.1.0",
+  "description": "Core library — credential store, auth, ACL engine, injection, audit",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./credentials": {
+      "types": "./dist/credentials/index.d.ts",
+      "import": "./dist/credentials/index.js"
+    },
+    "./auth": {
+      "types": "./dist/auth/index.d.ts",
+      "import": "./dist/auth/index.js"
+    },
+    "./acl": {
+      "types": "./dist/acl/index.d.ts",
+      "import": "./dist/acl/index.js"
+    },
+    "./injection": {
+      "types": "./dist/injection/index.d.ts",
+      "import": "./dist/injection/index.js"
+    },
+    "./config": {
+      "types": "./dist/config/index.d.ts",
+      "import": "./dist/config/index.js"
+    },
+    "./audit": {
+      "types": "./dist/audit/index.d.ts",
+      "import": "./dist/audit/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "vitest run",
+    "test:unit": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@psmmcp/types": "workspace:*",
+    "jose": "^6.0.0",
+    "node-vault": "^0.10.0",
+    "pino": "^9.0.0",
+    "yaml": "^2.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
