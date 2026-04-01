@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.turbo/
+coverage/
+.env
+.env.*
+!.env.example
+secrets.enc
+*.pem
+*.key
+*.cert
+.DS_Store
+Thumbs.db
